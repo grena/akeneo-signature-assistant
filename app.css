@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    background: #f9f9f9;
+}
+
+#app {
+    width: 600px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+form {
+    /* Just to center the form on the page */
+    margin: 50px auto;
+    padding-top: 50px;
+    width: 500px;
+    /* To see the outline of the form */
+    border-top: 1px solid #efefef;
+}
+form div + div {
+    margin-top: 5px;
+}
+label {
+    /* To make sure that all labels have the same size and are properly aligned */
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+    font-family: 'Lato', sans-serif;
+    color: #bfbfbf;
+}
+input, textarea {
+    font-family: 'Lato', sans-serif;
+    /* To make sure that all text fields have the same font settings By default, textareas have a monospace font */
+    font-size: 1em;
+    /* To give the same size to all text fields */
+    width: 80%;
+    box-sizing: border-box; /* To harmonize the look & feel of text field border */
+    border: 0;
+    border-bottom: 1px solid #bfbfbf;
+    padding: 5px;
+}
+input:focus, textarea:focus {
+    /* To give a little highlight on active elements */
+    /*border-color: #000;*/
+    outline: none;
+}
+textarea {
+    /* To properly align multiline text fields with their labels */
+    vertical-align: top;
+    /* To give enough room to type some text */
+    height: 5em;
+}
+.button {
+    /* To position the buttons to the same position of the text fields */
+    padding-left: 90px;
+    /* same size as the label elements */
+}
+button {
+    /* This extra margin represent roughly the same space as the space between the labels and their text fields */
+    margin-left: .5em;
+}
+
+button {
+    -moz-box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+    box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+    background-color:#5e63b6;
+    border:0;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    padding:6px 12px;
+    text-decoration:none;
+    border-radius: 4px;
+}
+button:hover {
+    background-color:#3b438c;
+}
+button:active {
+    position:relative;
+    top:1px;
+}
+button:focus {
+    outline: none;
+}
+
+.checkmark {
+    font-family: 'Lato', Arial;
+    font-weight: bold;
+    color: #56bb59;
+}
+
+[v-cloak] { display: none; }

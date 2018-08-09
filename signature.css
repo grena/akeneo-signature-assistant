@@ -1,0 +1,123 @@
+#signature {
+    width: 500px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(212,212,212,1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(212,212,212,1);
+    box-shadow: 0px 0px 15px 0px rgba(212,212,212,1);
+    margin: 0 auto;
+}
+
+#signature table {
+    width: 500px;
+    height: 140px;
+}
+
+#signature p {
+    margin: 0;
+}
+
+#signature a {
+    text-decoration: none;
+}
+
+#signature a:active {
+    color: #9452BA;
+}
+
+#signature .address a {
+    color: #9093CC;
+}
+
+#signature .phone a {
+    color: #9093CC;
+}
+
+#signature .logo {
+    width: 94px;
+    height: 107px;
+    padding: 20px;
+    text-align: center;
+}
+
+#signature .logo-box {
+    width: 178px;
+}
+
+#signature hr {
+    width: 0;
+    height: 130px;
+    border: 2px solid #9093CC;
+    border-radius: 2px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#signature .name {
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #52267D;
+
+}
+
+#signature .function {
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 10pt;
+    font-style: italic;
+    color: #5E63B6;
+    margin-bottom: 7px;
+
+
+}
+
+#signature .address {
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 8pt;
+    font-weight: normal;
+
+}
+
+#signature .mail {
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 8pt;
+    font-weight: normal;
+    color: #52267D;
+    line-height: 14pt;
+}
+
+#signature .phone {
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 8pt;
+    font-weight: normal;
+    color: #9093CC;
+}
+
+#signature .website {
+    text-align: left;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#signature .website a {
+    font-family: 'Lato', sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+    color: #52267D;
+}
+
+#signature .social-icons {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px
+}
+
+#signature .ziggy {
+    width: 97px;
+    height: 70px;
+}

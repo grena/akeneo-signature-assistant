@@ -1,0 +1,222 @@
+<html>
+
+    <head>
+        <title>Akeneo Email Signature Assistant</title>
+        <link rel="stylesheet" type="text/css" href="signature.css">
+        <link rel="stylesheet" type="text/css" href="app.css">
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <div id="app">
+
+            <!-- TABLE  BEGIN-->
+
+            <table id="signature" style="width:500px;margin-top:0;margin-bottom:0;" >
+                <tr>
+
+                    <!-- LOGO + SEPARATOR BEGIN-->
+
+                    <td class="logo-box" style="width:178px;" >
+                        <a href="https://www.akeneo.com" target="_blank" style="text-decoration:none;" >
+                            <img class="logo" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wss/223182/61411/Akeneo_Logo_Square_Black_WEB.png" alt="Akeneo" style="width:94px;height:107px;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;text-align:center;" />
+                        </a>
+                        <hr style="width:0;height:130px;border-width:2px;border-style:solid;border-color:#9093CC;border-radius:2px;display:inline-block;text-align:center;margin-left:10px;margin-right:10px;" />
+                    </td>
+
+                    <!-- LOGO + SEPARATOR END-->
+
+                    <!-- INFORMATIONS BEGIN -->
+
+                    <td>
+
+                        <!-- TEXT BEGIN -->
+
+                        <p class="name" style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:12pt;font-weight:bold;color:#52267D;" >{{ name }}</p>
+
+                        <p class="function" style="margin-top:0;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:10pt;font-style:italic;color:#5E63B6;margin-bottom:7px;" >{{ job }}</p>
+
+                        <p class="address" style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:8pt;font-weight:normal;" >
+                            <a v-bind:href="urlAddress" target="_blank" style="text-decoration:none;color:#9093CC;" >
+                                <img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsl/223182/61405/Akeneo_Icon_Pin.png" width="7px" height="10px" alt="Address"/>
+                                <span>{{ address }}</span>
+                            </a>
+                        </p>
+
+                        <p class="mail" style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:8pt;font-weight:normal;color:#52267D;line-height:14pt;" >{{ email }}</p>
+
+                        <p class="phone" style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:8pt;font-weight:normal;color:#9093CC;" >
+                            <a v-bind:href="urlPhone" style="text-decoration:none;color:#9093CC;" >
+                                <img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsn/223182/61407/Akeneo_Icon_Mobile.png" width="6px" height="10px" alt="Phone"/>
+                                <span>{{ phone }}</span>
+                            </a>
+                        </p>
+
+                        <p class="website" style="margin-right:0;margin-left:0;text-align:left;margin-top:7px;margin-bottom:7px;" >
+                            <a href="https://www.akeneo.com" target="_blank" style="text-decoration:none;font-family:'Lato', sans-serif;font-size:8pt;font-weight:bold;color:#52267D;" >www.akeneo.com</a>
+                        </p>
+
+                        <!-- TEXT END-->
+
+                        <!-- SOCIAL MEDIAS ICONS BEGIN -->
+
+                        <p style="position:relative;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" >
+                            <a href="https://twitter.com/akeneopim?lang=fr" target="_blank" style="text-decoration:none;" >
+                                <img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84ws6/223182/61395/Akeneo_Icon_Twitter.png" alt="Twitter" style="width:20px;height:20px;margin-right:2px;" />
+                            </a>
+                            <a href="https://github.com/akeneo" target="_blank" style="text-decoration:none;" >
+                                <img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsb/223182/61397/Akeneo_Icon_Github.png" alt="Github" style="width:20px;height:20px;margin-right:2px;" />
+                            </a>
+                            <a href="https://www.linkedin.com/company/akeneo/" target="_blank" style="text-decoration:none;" >
+                                <img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsj/223182/61403/Akeneo_Icon_Linkedin.png" alt="Linkedin" style="width:20px;height:20px;margin-right:2px;" />
+                            </a>
+                            <a href="https://www.facebook.com/akeneopim/?ref=br_rs" target="_blank" style="text-decoration:none;" >
+                                <img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-02/7zjbl/223182/61279/Akeneo_Icon_Facebook.png" alt="Facebook" style="width:20px;height:20px;margin-right:2px;" />
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCFFKXJdZLX5igCbitT-b6lA" target="_blank" style="text-decoration:none;" >
+                                <img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsd/223182/61399/Akeneo_Icon_Youtube.png" alt="Youtube" style="width:20px;height:20px;margin-right:2px;" />
+                            </a>
+                            <a href="https://www.instagram.com/akeneopim/" target="_blank" style="text-decoration:none;" >
+                                <img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsg/223182/61401/Akeneo_Icon_Instagram.png" alt="Instagram" style="width:20px;height:20px;margin-right:2px;" />
+                            </a>
+                        </p>
+                        <!-- SOCIAL MEDIAS ICONS END -->
+
+                    </td>
+
+                    <td style="vertical-align:bottom;" >
+                        <a href="https://ziggy.akeneo.com" target="_blank" style="text-decoration:none;" >
+                            <img class="ziggy" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsq/223182/61409/Akeneo_Illustration_Ziggy_Hello.png" alt="Ziggy" style="width:97px;height:70px;" />
+                        </a>
+                    </td>
+
+                    <!-- TEXT END -->
+
+                </tr>
+            </table>
+
+            <!-- / TABLE END-->
+
+            <!--&lt;!&ndash; TABLE  BEGIN&ndash;&gt;-->
+
+            <!--<table id="signature">-->
+                <!--<tr>-->
+
+                    <!--&lt;!&ndash; LOGO + SEPARATOR BEGIN&ndash;&gt;-->
+
+                    <!--<td class="logo-box">-->
+                        <!--<a href="https://www.akeneo.com" target="_blank">-->
+                            <!--<img class="logo" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wss/223182/61411/Akeneo_Logo_Square_Black_WEB.png" alt="Akeneo"/>-->
+                        <!--</a>-->
+                        <!--<hr/>-->
+                    <!--</td>-->
+
+                    <!--&lt;!&ndash; LOGO + SEPARATOR END&ndash;&gt;-->
+
+                    <!--&lt;!&ndash; INFORMATIONS BEGIN &ndash;&gt;-->
+
+                    <!--<td>-->
+
+                        <!--&lt;!&ndash; TEXT BEGIN &ndash;&gt;-->
+
+                        <!--<p class="name">{{ name }}</p>-->
+
+                        <!--<p class="function">{{ job }}</p>-->
+
+                        <!--<p class="address">-->
+                            <!--<a v-bind:href="urlAddress" target="_blank">-->
+                                <!--<img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsl/223182/61405/Akeneo_Icon_Pin.png" width="7px" height="10px" alt="Address"/>-->
+                                <!--<span>{{ address }}</span>-->
+                            <!--</a>-->
+                        <!--</p>-->
+
+                        <!--<p class="mail">{{ email }}</p>-->
+
+                        <!--<p class="phone">-->
+                            <!--<a v-bind:href="urlPhone">-->
+                                <!--<img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsn/223182/61407/Akeneo_Icon_Mobile.png" width="6px" height="10px" alt="Phone"/>-->
+                                <!--<span>{{ phone }}</span>-->
+                            <!--</a>-->
+                        <!--</p>-->
+
+                        <!--<p class="website">-->
+                            <!--<a href="https://www.akeneo.com" target="_blank">www.akeneo.com</a>-->
+                        <!--</p>-->
+
+                        <!--&lt;!&ndash; TEXT END&ndash;&gt;-->
+
+                        <!--&lt;!&ndash; SOCIAL MEDIAS ICONS BEGIN &ndash;&gt;-->
+
+                        <!--<p style="position: relative;">-->
+                            <!--<a href="https://twitter.com/akeneopim?lang=fr" target="_blank">-->
+                                <!--<img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84ws6/223182/61395/Akeneo_Icon_Twitter.png" alt="Twitter"/>-->
+                            <!--</a>-->
+                            <!--<a href="https://github.com/akeneo" target="_blank">-->
+                                <!--<img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsb/223182/61397/Akeneo_Icon_Github.png" alt="Github"/>-->
+                            <!--</a>-->
+                            <!--<a href="https://www.linkedin.com/company/akeneo/" target="_blank">-->
+                                <!--<img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsj/223182/61403/Akeneo_Icon_Linkedin.png" alt="Linkedin"/>-->
+                            <!--</a>-->
+                            <!--<a href="https://www.facebook.com/akeneopim/?ref=br_rs" target="_blank">-->
+                                <!--<img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-02/7zjbl/223182/61279/Akeneo_Icon_Facebook.png" alt="Facebook"/>-->
+                            <!--</a>-->
+                            <!--<a href="https://www.youtube.com/channel/UCFFKXJdZLX5igCbitT-b6lA" target="_blank">-->
+                                <!--<img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsd/223182/61399/Akeneo_Icon_Youtube.png" alt="Youtube"/>-->
+                            <!--</a>-->
+                            <!--<a href="https://www.instagram.com/akeneopim/" target="_blank">-->
+                                <!--<img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsg/223182/61401/Akeneo_Icon_Instagram.png" alt="Instagram"/>-->
+                            <!--</a>-->
+                        <!--</p>-->
+                        <!--&lt;!&ndash; SOCIAL MEDIAS ICONS END &ndash;&gt;-->
+
+                    <!--</td>-->
+
+                    <!--<td style="vertical-align: bottom;">-->
+                        <!--<a href="https://ziggy.akeneo.com" target="_blank">-->
+                            <!--<img class="ziggy" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsq/223182/61409/Akeneo_Illustration_Ziggy_Hello.png" alt="Ziggy"/>-->
+                        <!--</a>-->
+                    <!--</td>-->
+
+                    <!--&lt;!&ndash; TEXT END &ndash;&gt;-->
+
+                <!--</tr>-->
+            <!--</table>-->
+
+            <!--&lt;!&ndash; / TABLE END&ndash;&gt;-->
+
+            <form>
+                <div>
+                    <label for="name">Name:</label> <input type="text" id="name" v-model="name">
+                </div>
+                <div>
+                    <label for="job">Job:</label> <input type="text" id="job" v-model="job">
+                </div>
+                <div>
+                    <label for="address">Address:</label> <input type="text" id="address" v-model="address">
+                </div>
+                <div>
+                    <label for="mail">E-mail:</label> <input type="email" id="mail" v-model="email">
+                </div>
+                <div>
+                    <label for="phone">Phone:</label> <input type="text" id="phone" v-model="phone">
+                </div>
+            </form>
+
+            <div style="text-align: center;">
+                <button v-on:click="copyToClipboard">COPY TO CLIPBOARD</button>
+                <p v-cloak v-bind:class="{ visible: displayTips }" class="checkmark" v-if="displayTips">✔ Copied to clipboard!</p>
+            </div>
+
+        </div>
+
+
+        <!-- development version, includes helpful console warnings -->
+        <!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+
+        <!-- production version, optimized for size and speed -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+        <script src="app.js"></script>
+    </body>
+
+</html>
