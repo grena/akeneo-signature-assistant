@@ -5,7 +5,7 @@ const app = new Vue({
         job: 'Super Hero',
         address: '2 Place General Mellinet, 44100 Nantes',
         email: 'john.doe@example.com',
-        phone: '+336 32 86 59 36',
+        phone: '+336 99 99 99 99',
         displayTips: false
     },
     computed: {
