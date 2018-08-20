@@ -19,9 +19,8 @@
 
                     <td class="logo-box" style="width:178px;" >
                         <a href="https://www.akeneo.com" target="_blank" style="text-decoration:none;" >
-                            <img class="logo" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wss/223182/61411/Akeneo_Logo_Square_Black_WEB.png" alt="Akeneo" style="width:94px;height:107px;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;text-align:center;" />
+                            <img class="logo" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wss/223182/61411/Akeneo_Logo_Square_Black_WEB.png" alt="Akeneo" style="width:94px;height:107px;padding-top:22px;padding-bottom:22px;padding-right:30px;padding-left:30px;text-align:center; border-right: 3px solid #DFE1F0;" />
                         </a>
-                        <hr style="width:0;height:130px;border-width:2px;border-style:solid;border-color:#9093CC;border-radius:2px;display:inline-block;text-align:center;margin-left:10px;margin-right:10px;" />
                     </td>
 
                     <!-- LOGO + SEPARATOR END-->
@@ -34,25 +33,25 @@
 
                         <p class="name" style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:12pt;font-weight:bold;color:#52267D;" >{{ name }}</p>
 
-                        <p class="function" style="margin-top:0;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:10pt;font-style:italic;color:#5E63B6;margin-bottom:7px;" >{{ job }}</p>
+                        <p class="function" style="margin-top:0;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:10pt;font-style:italic;color:#5E63B6;margin-bottom:10px;" >{{ job }}</p>
 
-                        <p class="address" style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:8pt;font-weight:normal;" >
+                        <p class="address" style="margin-top:0;margin-bottom:4px;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:8pt;font-weight:normal;" >
                             <a v-bind:href="urlAddress" target="_blank" style="text-decoration:none;color:#9093CC;" >
                                 <img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsl/223182/61405/Akeneo_Icon_Pin.png" width="7px" height="10px" alt="Address"/>
                                 <span>{{ address }}</span>
                             </a>
                         </p>
 
-                        <p class="mail" style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:8pt;font-weight:normal;color:#52267D;line-height:14pt;" >{{ email }}</p>
+                        <p class="mail" style="margin-top:0;margin-bottom:4px;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:8pt;font-weight:normal;color:#5E63B6;line-height:14pt;" >{{ email }}</p>
 
                         <p class="phone" style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;text-align:left;font-family:'Lato', sans-serif;font-size:8pt;font-weight:normal;color:#9093CC;" >
                             <a v-bind:href="urlPhone" style="text-decoration:none;color:#9093CC;" >
-                                <img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsn/223182/61407/Akeneo_Icon_Mobile.png" width="6px" height="10px" alt="Phone"/>
+                                <img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsn/223182/61407/Akeneo_Icon_Mobile.png" width="7px" height="10px" alt="Phone"/>
                                 <span>{{ phone }}</span>
                             </a>
                         </p>
 
-                        <p class="website" style="margin-right:0;margin-left:0;text-align:left;margin-top:7px;margin-bottom:7px;" >
+                        <p class="website" style="margin-right:0;margin-left:0;text-align:left;margin-top:10px;margin-bottom:10px;" >
                             <a href="https://www.akeneo.com" target="_blank" style="text-decoration:none;font-family:'Lato', sans-serif;font-size:8pt;font-weight:bold;color:#52267D;" >www.akeneo.com</a>
                         </p>
 
@@ -86,7 +85,7 @@
 
                     <td style="vertical-align:bottom;" >
                         <a href="https://ziggy.akeneo.com" target="_blank" style="text-decoration:none;" >
-                            <img class="ziggy" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsq/223182/61409/Akeneo_Illustration_Ziggy_Hello.png" alt="Ziggy" style="width:97px;height:70px;" />
+                            <img class="ziggy" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsq/223182/61409/Akeneo_Illustration_Ziggy_Thumbnail.png" alt="Ziggy" style="width:90px;height:72px;" />
                         </a>
                     </td>
 
@@ -183,28 +182,166 @@
             <!--</table>-->
 
             <!--&lt;!&ndash; / TABLE END&ndash;&gt;-->
-
+            <h1>Step 1</h1>
             <form>
                 <div>
-                    <label for="name">Name:</label> <input type="text" id="name" v-model="name">
+                    <label for="name">Name:</label> <input @focus="emptyField('name')" type="text" id="name" v-model="name">
                 </div>
                 <div>
-                    <label for="job">Job:</label> <input type="text" id="job" v-model="job">
+                    <label for="job">Job:</label> <input @focus="emptyField('job')" type="text" id="job" v-model="job">
                 </div>
                 <div>
-                    <label for="address">Address:</label> <input type="text" id="address" v-model="address">
+                    <label for="address">Address:</label> <input  @focus="emptyField('address')" type="text" id="address" v-model="address">
                 </div>
                 <div>
-                    <label for="mail">E-mail:</label> <input type="email" id="mail" v-model="email">
+                    <label for="mail">E-mail:</label> <input @focus="emptyField('email')" type="email" id="mail" v-model="email">
                 </div>
                 <div>
-                    <label for="phone">Phone:</label> <input type="text" id="phone" v-model="phone">
+                    <label for="phone">Phone:</label> <input @focus="emptyField('phone')" type="text" id="phone" v-model="phone">
                 </div>
             </form>
+            <!-- INTEGRATION IN GMAIL BEGIN -->
+            <div class="box-info">
+              <h1>Step 2</h1>
+              <div class="info">
+                <button class="collapsible js-custom-sleeve-option">Integration in Gmail<span class="js-arrow-down"></span></button>
+                <div class="content">
+                  <p>First of all, click on this button to copy your signature:</p>
+                  <div class="button">
+                    <button v-on:click="copyToClipboard">COPY SIGNATURE</button>
+                    <div style="min-height: 15px; margin-top: 15px;">
+                      <p v-cloak v-bind:class="{ visible: displayTips }" class="checkmark" v-if="displayTips">✔ Copied to clipboard!</p>
+                    </div>
+                  </div>
+                  <p>Make sure that you've filled correctly every field and <span style="font-weight: bold;">copied to clipboard</span> your signature from this assistant. Then open your mailbox:</p>
+                    <ul>
+                      <li>Click on the settings icon, on the top right of your screen</li>
+                      <li>Choose "Settings" </li>
+                      <li>Scroll a bit to the "Signature" part</li>
+                      <li>Click in the text area and paste (CTRL+V) your email signature</li>
+                    </ul>
+                  <p>It will appear like this:</p>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gbx/223182/62775/Preview_Gmail.png" alt="gmail"/>
+                  <p>Don't forget to save changes below <span style="color: #9452BA; font-weight: normal;">;) And that's it!</span></p>
+                  <p>Every mailbox has is own specifications regarding the display, so you will see small changes, for Gmail: the email address is blue and underlined. So when you will send an e-mail, it will appear like this:</p>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gbz/223182/62777/Preview_Gmail_2.png" alt="gmail"/>
+                  <p>Don't worry about the images, they are hosted in Pardot, so no image in attachement <span style="color: #9452BA; font-weight: normal;;">:)</span> They could appear with a small delay.</p>
+                </div>
+              </div>
+              <!-- INTEGRATION IN GMAIL END -->
 
-            <div style="text-align: center;">
-                <button v-on:click="copyToClipboard">COPY TO CLIPBOARD</button>
-                <p v-cloak v-bind:class="{ visible: displayTips }" class="checkmark" v-if="displayTips">✔ Copied to clipboard!</p>
+              <!-- INTEGRATION IN OUTLOOK BEGIN -->
+              <div class="info">
+                <button class="collapsible js-custom-sleeve-option">Integration in Outlook App<span class="js-arrow-down"></span></button>
+                <div class="content">
+                  <p>First of all, click on this button to copy your signature:</p>
+                  <div class="button">
+                    <button v-on:click="copyToClipboard">COPY SIGNATURE</button>
+                    <div style="min-height: 15px; margin-top: 15px;">
+                      <p v-cloak v-bind:class="{ visible: displayTips }" class="checkmark" v-if="displayTips">✔ Copied to clipboard!</p>
+                    </div>
+                  </div>
+                  <p>Make sure that you've filled correctly every field and copied to clipboard your signature from this assistant <span style="color: #9452BA; font-weight: bold;">;)</span> Then open your mailbox:</p>
+                  <ul>
+                    <li>Click on "New email", a new window will open:</li>
+                  </ul>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gcn/223182/62779/Preview_Outlook.png" alt="outlook"/>
+                  <ul>
+                    <li>Click on "Signature" tab in the toolbar, a new window will open:</li>
+                  </ul>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gcq/223182/62781/Preview_Outlook_2.png" alt="outlook"/>
+                  <ul>
+                    <li>Click on the signature you want to edit, you can also add a new signature with the "+", then click on edit, a new widow will open:</li>
+                  </ul>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gcv/223182/62783/Preview_Outlook_3.png" alt="outlook"/>
+                  <ul>
+                    <li>You can now paste (CTRL+V) your mail signature in the text area, it will appear like that:</li>
+                  </ul>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gds/223182/62785/Preview_Outlook_4.png" alt="outlook"/>
+                  <p>As you can see, it's broken. Sadly, there is no magic wand on Outlook App, you will have to modify the size of every elements by your own, and the serparator bar will not appear <span style="color: #9452BA; font-weight: bold;">:/</span></p>
+                  <ul>
+                    <li>You can increase the global size to let more space for every element with the square on the bottom right</li>
+                  </ul>
+                  <ul>
+                    <li> Then, to modify each single element : Right-click on it once, and Left-click on the side, a square will appear around, you can now resize it by holding down SHIFT</li>
+                  </ul>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gdv/223182/62787/Preview_Outlook_5.png" alt="outlook"/>
+                  <p>Every mailbox has is own specifications regarding the display, Outlook modifies a lot of things (every link clicked appears in red) so good luck <span style="color: #9452BA; font-weight: bold;">;)</span> If you are talented it could appear like that:</p>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gdx/223182/62789/Preview_Outlook_6.png" alt="outlook"/>
+                  <p>Don't forget to save changes (CTRL + S), then select your signature in the "Signature" tab when you write an email <span style="color: #9452BA; font-weight: bold;">;)</span></p>
+                  <p>Don't worry about the images, they are hosted in Pardot, so no image in attachement <span style="color: #9452BA; font-weight: bold;">:)</span> They could appear with a small delay. </p>
+                </div>
+              </div>
+              <!-- INTEGRATION IN OUTLOOK END -->
+
+              <!-- INTEGRATION IN THUNDERBIRD BEGIN -->
+              <div class="info">
+                <button class="collapsible js-custom-sleeve-option">Integration in Thunderbird<span class="js-arrow-down"></button>
+                <div class="content">
+                  <p>First of all, click on this button to copy your signature:</p>
+                  <div class="button">
+                    <button v-on:click="copyToClipboardHtml">COPY SIGNATURE HTML</span></button>
+                    <div style="min-height: 15px; margin-top: 15px;">
+                      <p v-cloak v-bind:class="{ visible: displayTips }" class="checkmark" v-if="displayTips">✔ Copied to clipboard!</p>
+                    </div>
+                  </div>
+                  <p>Make sure that you've filled correctly every field and copied to clipboard your signature from this assistant <span style="color: #9452BA; font-weight: bold;">;)</span>  Then open your mailbox:</p>
+                    <ul>
+                      <li>Click on "Tools" in the toolbar</li>
+                      <li>Choose "Account Settings" </li>
+                      <li>In the "Signature" part, check "Use HTML"</li>
+                      <li>Then paste (CTRL+V) the code in text area bleow</li>
+                    </ul>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gdz/223182/62791/Preview_Thunderbird.png" alt="thunderbird"/>
+                  <p>Don't forget to click on "OK" below, to save changes <span style="color: #9452BA; font-weight: bold;">;)</span></p>
+                  <p>Every mailbox has is own specifications regarding the display, so you will see small changes, for Thunderbird: the email address is blue and underlined. So when you will send an e-mail, it will appear like this:</p>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gf2/223182/62793/Preview_Thunderbird_2.png" alt="thunderbird"/>
+                  <p>Don't worry about the images, they are hosted in Pardot, so no image in attachement <span style="color: #9452BA; font-weight: bold;">:)</span> They could appear with a small delay. </p>
+                </div>
+              </div>
+              <!-- INTEGRATION IN THUNDERBIRD END -->
+
+              <!-- INTEGRATION IN APPLE MAIL BEGIN -->
+              <div class="info">
+                <button class="collapsible js-custom-sleeve-option">Integration in Apple Mail<span class="js-arrow-down"></span></button>
+                <div class="content">
+                  <p>First of all, click on this button to copy your signature:</p>
+                  <div class="button">
+                    <button v-on:click="copyToClipboard">COPY SIGNATURE</button>
+                    <div style="min-height: 15px; margin-top: 15px;">
+                      <p v-cloak v-bind:class="{ visible: displayTips }" class="checkmark" v-if="displayTips">✔ Copied to clipboard!</p>
+                    </div>
+                  </div>
+                  <p>Make sure that you've filled correctly every field and copied to clipboard your signature from this assistant <span style="color: #9452BA; font-weight: bold;">;)</span>  Then open your mailbox:</p>
+                    <ul>
+                      <li>Click on "Mail" in the toolbar</li>
+                      <li>Choose "Preferences" and click on the "Signature" tab </li>
+                      <li>Choose your account</li>
+                      <li>Select a signature or add one with the "+"</li>
+                      <li>Paste (CTRL+V) your signature in the text area on the right</li>
+                      <li>Uncheck "Always match my default message font (Helevtica 12)"</li>
+                    </ul>
+                  <p>You won't see the images in the text area, but they will appear in the emails</p>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gf6/223182/62795/Preview_Apple_Mail.png" alt="apple-mail"/>
+                  <p>After that you just need to select you mail signature, on the top right above the text area, when you write a new email</p>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gfd/223182/62799/Preview_Apple_Mail_3.png" alt="apple-mail"/>
+                  <p>Every mailbox has is own specifications regarding the display, so you will see small changes, for Mail: all the links (e-mail address) are blue and underlined. So when you will send an e-mail, it will appear like this:</p>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-20/89gfb/223182/62797/Preview_Apple_Mail_2.png" alt="apple-mail"/>
+                  <p>Don't worry about the images, they are hosted in Pardot, so no image in attachement <span style="color: #9452BA; font-weight: bold;">:)</span> They could appear with a small delay. </p>
+                </div>
+              </div>
+              <!-- INTEGRATION IN APPLE MAIL END -->
+              <div style="padding-top: 20px;">
+                <p>If your mailbox isn't in the list, find how to integrate it and click on the right button below. Copy the signature with the layout or Copy the HTML of the signature.</p>
+                <div class="button">
+                  <button v-on:click="copyToClipboard">COPY SIGNATURE</button>
+                  <button v-on:click="copyToClipboardHtml">COPY SIGNATURE HTML</span></button>
+                  <div style="min-height: 15px; margin-top: 15px;">
+                    <p v-cloak v-bind:class="{ visible: displayTips }" class="checkmark" v-if="displayTips">✔ Copied to clipboard!</p>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
         </div>
@@ -215,8 +352,25 @@
 
         <!-- production version, optimized for size and speed -->
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
         <script src="app.js"></script>
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.maxHeight){
+                content.style.maxHeight = null;
+              } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+              }
+            });
+          }
+        </script>
     </body>
 
 </html>
