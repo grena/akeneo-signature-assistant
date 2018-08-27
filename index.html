@@ -331,6 +331,39 @@
                 </div>
               </div>
               <!-- INTEGRATION IN APPLE MAIL END -->
+
+              <!-- INTEGRATION IN PARDOT BEGIN -->
+              <div class="info">
+                <button class="collapsible js-custom-sleeve-option">Integration in Pardot<span class="js-arrow-down"></button>
+                <div class="content">
+                  <p>First of all, click on this button to copy your signature:</p>
+                  <div class="button">
+                    <button v-on:click="copyToClipboardHtml">COPY SIGNATURE HTML</span></button>
+                    <div style="min-height: 15px; margin-top: 15px;">
+                      <p v-cloak v-bind:class="{ visible: displayTips }" class="checkmark" v-if="displayTips">✔ Copied to clipboard!</p>
+                    </div>
+                  </div>
+                  <p>Make sure that you've filled correctly every field and copied to clipboard your signature from this assistant <span style="color: #9452BA; font-weight: bold;">;)</span>  Then open Pardot:</p>
+                  <ul>
+                    <li>Click on the "Settings" icon on the top right of your screen</li>
+                  </ul>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-27/8c4zn/223182/63655/Preview_Pardot.png" alt="pardot"/>
+                  <ul>
+                    <li>Choose "Settings" </li>
+                    <li>Click on "My Profile" then on "Edit"</li>
+                  </ul>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-27/8c4zz/223182/63657/Preview_Pardot_2.png" alt="pardot"/>
+                  <ul>
+                    <li>Go to the "HTML Email Signature" part</li>
+                    <li>Then paste (CTRL+V) the code in text area</li>
+                  </ul>
+                  <img class="preview" src="https://bonjour.akeneo.com/l/223182/2018-08-27/8c512/223182/63659/Preview_Pardot_3.png" alt="pardot"/>
+                  <p>Don't forget to click on "Save User" button below, to save changes <span style="color: #9452BA; font-weight: bold;">;)</span></p>
+                  <p>Don't worry about the images, they are hosted in Pardot, so no image in attachement <span style="color: #9452BA; font-weight: bold;">:)</span> They could appear with a small delay. </p>
+                </div>
+              </div>
+              <!-- INTEGRATION IN PARDOT END -->
+
               <div style="padding-top: 20px;">
                 <p>If your mailbox isn't in the list, find how to integrate it and click on the right button below. Copy the signature with the layout or Copy the HTML of the signature.</p>
                 <div class="button">
