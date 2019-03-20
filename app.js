@@ -8,6 +8,7 @@ const app = new Vue({
         address: '2 Place General Mellinet, 44100 Nantes',
         email: 'john.doe@example.com',
         phone: '+33 6 99 99 99 99',
+        calendar: '',
         displayTips: false,
         dirty: {
             name: false,
@@ -15,6 +16,7 @@ const app = new Vue({
             address: false,
             email: false,
             phone: false,
+            calendar: false,
         }
     },
     computed: {

@@ -48,6 +48,14 @@
                             <a v-bind:href="urlPhone" style="text-decoration:none;color:#9093CC;" >
                                 <img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsn/223182/61407/Akeneo_Icon_Mobile.png" width="7px" height="10px" alt="Phone"/>
                                 <span>{{ phone }}</span>
+                            <span v-if="calendar">
+                              <span > - </span>
+                              <a title="Plan a meeting" v-bind:href="calendar" target="_blank" style="text-decoration:none; color: #9452BA;" >
+                              <img src="https://bonjour.akeneo.com/l/223182/2019-03-19/bsxxy/223182/86500/Akeneo_Icon_Calendar.png" alt="Plan a meeting" style="width:10px; height: 10px; margin-right: 2px; margin-left: 2px;" />
+                               Plan a meeting
+                             </span>
+                            </a>
+
                             </a>
                         </p>
 
@@ -61,22 +69,22 @@
 
                         <p style="position:relative;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" >
                             <a href="https://twitter.com/akeneopim" target="_blank" style="text-decoration:none;" >
-                                <img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84ws6/223182/61395/Akeneo_Icon_Twitter.png" alt="Twitter" style="width:20px;height:20px;margin-right:2px;" />
+                                <img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84ws6/223182/61395/Akeneo_Icon_Twitter.png" alt="Twitter" style="width:20px;height:20px;margin-right:2px;" />
                             </a>
                             <a href="https://github.com/akeneo" target="_blank" style="text-decoration:none;" >
-                                <img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsb/223182/61397/Akeneo_Icon_Github.png" alt="Github" style="width:20px;height:20px;margin-right:2px;" />
+                                <img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsb/223182/61397/Akeneo_Icon_Github.png" alt="Github" style="width:20px;height:20px;margin-right:2px;" />
                             </a>
                             <a href="https://www.linkedin.com/company/akeneo/" target="_blank" style="text-decoration:none;" >
-                                <img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsj/223182/61403/Akeneo_Icon_Linkedin.png" alt="Linkedin" style="width:20px;height:20px;margin-right:2px;" />
+                                <img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsj/223182/61403/Akeneo_Icon_Linkedin.png" alt="Linkedin" style="width:20px;height:20px;margin-right:2px;" />
                             </a>
                             <a href="https://www.facebook.com/akeneopim/?ref=br_rs" target="_blank" style="text-decoration:none;" >
-                                <img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-02/7zjbl/223182/61279/Akeneo_Icon_Facebook.png" alt="Facebook" style="width:20px;height:20px;margin-right:2px;" />
+                                <img src="https://bonjour.akeneo.com/l/223182/2018-08-02/7zjbl/223182/61279/Akeneo_Icon_Facebook.png" alt="Facebook" style="width:20px;height:20px;margin-right:2px;" />
                             </a>
                             <a href="https://www.youtube.com/channel/UCFFKXJdZLX5igCbitT-b6lA" target="_blank" style="text-decoration:none;" >
-                                <img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsd/223182/61399/Akeneo_Icon_Youtube.png" alt="Youtube" style="width:20px;height:20px;margin-right:2px;" />
+                                <img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsd/223182/61399/Akeneo_Icon_Youtube.png" alt="Youtube" style="width:20px;height:20px;margin-right:2px;" />
                             </a>
                             <a href="https://www.instagram.com/akeneopim/" target="_blank" style="text-decoration:none;" >
-                                <img class="social-icons" src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsg/223182/61401/Akeneo_Icon_Instagram.png" alt="Instagram" style="width:20px;height:20px;margin-right:2px;" />
+                                <img src="https://bonjour.akeneo.com/l/223182/2018-08-05/84wsg/223182/61401/Akeneo_Icon_Instagram.png" alt="Instagram" style="width:20px;height:20px;margin-right:2px;" />
                             </a>
                         </p>
                         <!-- SOCIAL MEDIAS ICONS END -->
@@ -198,6 +206,9 @@
                 </div>
                 <div>
                     <label for="phone">Phone:</label> <input @focus="emptyField('phone')" type="text" id="phone" v-model="phone">
+                </div>
+                <div>
+                    <label for="calendar">Calendar:</label> <input @focus="emptyField('calendar')" type="text" id="calendar" v-model="calendar">
                 </div>
             </form>
             <!-- INTEGRATION IN GMAIL BEGIN -->
