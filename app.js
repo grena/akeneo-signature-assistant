@@ -29,17 +29,8 @@ const app = new Vue({
     },
 
     methods: {
-        copyToClipboard: function () {
-            HTML = false;
-            document.execCommand('copy');
-            this.displayTips = true;
-            setTimeout(() => {
-                this.displayTips = false;
-            }, 2500);
-        },
         copyToClipboardHtml: function () {
-          HTML = true;
-          document.execCommand('copy');
+          navigator.clipboard.writeText(document.getElementById("signature").outerHTML);
           this.displayTips = true;
           setTimeout(() => {
               this.displayTips = false;
@@ -54,18 +45,6 @@ const app = new Vue({
         }
 
     }
-});
-
-
-window.addEventListener('copy', function (ev) {
-    var copyText = document.getElementById("signature");
-    if (HTML) {
-      ev.clipboardData.setData('text/plain', copyText.outerHTML);
-    } else {
-      ev.clipboardData.setData('text/html', copyText.outerHTML);
-    }
-
-    ev.preventDefault();
 });
 
 $('.js-custom-sleeve-option').click(function(){

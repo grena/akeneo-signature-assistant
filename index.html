@@ -190,6 +190,7 @@
             <!--</table>-->
 
             <!--&lt;!&ndash; / TABLE END&ndash;&gt;-->
+            <div style="margin: 40px 0 40px 0; border: 1px solid #cecece;"></div>
             <h1>Step 1</h1>
             <form>
                 <div>
@@ -217,13 +218,7 @@
               <div class="info">
                 <button class="collapsible js-custom-sleeve-option">Integration in Gmail<span class="js-arrow-down"></span></button>
                 <div class="content">
-                  <p>First of all, click on this button to copy your signature:</p>
-                  <div class="button">
-                    <button v-on:click="copyToClipboard">COPY SIGNATURE</button>
-                    <div style="min-height: 15px; margin-top: 15px;">
-                      <p v-cloak v-bind:class="{ visible: displayTips }" class="checkmark" v-if="displayTips">✔ Copied to clipboard!</p>
-                    </div>
-                  </div>
+                  <p>First of all, <b>select the generated signature above as you would select some text</b> in Word.</p>
                   <p>Make sure that you've filled correctly every field and <span style="font-weight: bold;">copied to clipboard</span> your signature from this assistant. Then open your mailbox:</p>
                     <ul>
                       <li>Click on the settings icon, on the top right of your screen</li>
@@ -245,13 +240,7 @@
               <div class="info">
                 <button class="collapsible js-custom-sleeve-option">Integration in Outlook App<span class="js-arrow-down"></span></button>
                 <div class="content">
-                  <p>First of all, click on this button to copy your signature:</p>
-                  <div class="button">
-                    <button v-on:click="copyToClipboard">COPY SIGNATURE</button>
-                    <div style="min-height: 15px; margin-top: 15px;">
-                      <p v-cloak v-bind:class="{ visible: displayTips }" class="checkmark" v-if="displayTips">✔ Copied to clipboard!</p>
-                    </div>
-                  </div>
+                    <p>First of all, <b>select the generated signature above as you would select some text</b> in Word.</p>
                   <p>Make sure that you've filled correctly every field and copied to clipboard your signature from this assistant <span style="color: #9452BA; font-weight: bold;">;)</span> Then open your mailbox:</p>
                   <ul>
                     <li>Click on "New email", a new window will open:</li>
@@ -316,13 +305,7 @@
               <div class="info">
                 <button class="collapsible js-custom-sleeve-option">Integration in Apple Mail<span class="js-arrow-down"></span></button>
                 <div class="content">
-                  <p>First of all, click on this button to copy your signature:</p>
-                  <div class="button">
-                    <button v-on:click="copyToClipboard">COPY SIGNATURE</button>
-                    <div style="min-height: 15px; margin-top: 15px;">
-                      <p v-cloak v-bind:class="{ visible: displayTips }" class="checkmark" v-if="displayTips">✔ Copied to clipboard!</p>
-                    </div>
-                  </div>
+                    <p>First of all, <b>select the generated signature above as you would select some text</b> in Word.</p>
                   <p>Make sure that you've filled correctly every field and copied to clipboard your signature from this assistant <span style="color: #9452BA; font-weight: bold;">;)</span>  Then open your mailbox:</p>
                     <ul>
                       <li>Click on "Mail" in the toolbar</li>
@@ -378,8 +361,7 @@
               <div style="padding-top: 20px;">
                 <p>If your mailbox isn't in the list, find how to integrate it and click on the right button below. Copy the signature with the layout or Copy the HTML of the signature.</p>
                 <div class="button">
-                  <button v-on:click="copyToClipboard">COPY SIGNATURE</button>
-                  <button v-on:click="copyToClipboardHtml">COPY SIGNATURE HTML</span></button>
+                  <button v-on:clik="copyToClipboardHtml">COPY SIGNATURE HTML</span></button>
                   <div style="min-height: 15px; margin-top: 15px;">
                     <p v-cloak v-bind:class="{ visible: displayTips }" class="checkmark" v-if="displayTips">✔ Copied to clipboard!</p>
                   </div>
@@ -395,7 +377,7 @@
         <!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
 
         <!-- production version, optimized for size and speed -->
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
         <script src="app.js"></script>
